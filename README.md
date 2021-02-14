@@ -30,17 +30,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 Admin kullanıcısı sadece firebase'den oluşturulabiliyor.
 
-Manager
-manager@manager.com
-123456
-
-Users
-xdxdxd.2@gmail.com
-123456
-
-xxxx1@gmail.com
-123456
-
 Manager kullanıcına girerken url = http://localhost:4220/auth/manager-login
 Son kullanıcı girerken = http://localhost:4220/auth/login
 Son kullanıcı kayıt = http://localhost:4220/auth/register
