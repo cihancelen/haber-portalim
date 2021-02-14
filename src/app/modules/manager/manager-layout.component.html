@@ -1,0 +1,14 @@
+<nav class="navbar navbar-light bg-primary sticky-top">
+  <div class="container-fluid justify-content-start">
+    <a class="navbar-brand text-white font-weight-normal" routerLink="/manager">haberportalim.com Manager</a>
+
+    <div class="navbar-nav">
+      <a class="nav-link text-white" routerLink="/manager/add-new" routerLinkActive="active">Add New</a>
+    </div>
+
+
+    <button class="btn btn-link text-white ml-auto" (click)="logout()">Logout</button>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

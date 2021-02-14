@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row card-align-center">
+    <div class="col-12 col-lg-6 mx-auto">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title text-center">Login</h5>
+
+          <form [formGroup]="loginForm" (ngSubmit)="submit()">
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email" placeholder="name@example.com" formControlName="email">
+            </div>
+
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password" placeholder="******" formControlName="password">
+            </div>
+
+            <button class="btn btn-block btn-primary" type="submit" [disabled]="loginForm.invalid">Login</button>
+          </form>
+
+          <a routerLink="/auth/register" class="card-link d-block text-right">Register</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

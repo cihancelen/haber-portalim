@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mt-3" *ngFor="let item of $news | async">
+      <div class="card news-card">
+        <!-- <img src="..." class="card-img-top" alt="..."> -->
+        <div class="card-body">
+          <h5 class="card-title" [title]="item.title">{{ item.title }}</h5>
+          <p class="card-text" [title]="item.description">{{ item.description }}</p>
+          <span class="d-block mb-1">{{ item.modifiedDate.toDate() | date }}</span>
+          <a [routerLink]="['/manager/new', item.friendlyUrl]" class="btn btn-primary btn-block">Go to Detail</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

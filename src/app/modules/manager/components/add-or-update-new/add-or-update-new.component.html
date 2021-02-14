@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row card-align-center">
+    <div class="col-12 col-lg-6 mx-auto">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title text-center">Add or Update News</h5>
+
+          <form [formGroup]="newsForm" (ngSubmit)="submit()">
+            <div class="mb-3">
+              <label for="title" class="form-label">Title</label>
+              <input type="text" class="form-control" id="title" placeholder="Title..." formControlName="title">
+            </div>
+
+            <div class="mb-3">
+              <label for="description" class="form-label">Description</label>
+              <textarea type="text" class="form-control" id="description" placeholder="Description..."
+                formControlName="description"></textarea>
+            </div>
+
+            <!-- <div class="mb-3">
+              <label for="image" class="form-label">Image</label>
+              <input type="file" class="form-control" id="image" placeholder="Image..." formControlName="img"
+                (change)="onFileChange($event)" [accept]="'*'">
+            </div> -->
+
+            <div class="mb-3">
+              <label for="tags" class="form-label">Tags</label>
+              <input type="text" class="form-control" id="tags"
+                placeholder="Please seperate comma (world,usa,turkey...)" formControlName="tags">
+            </div>
+
+            <button class="btn btn-block btn-primary" type="submit" [disabled]="newsForm.invalid">{{ state === 'add' ? 'Create' : 'Update' }} News</button>
+          </form>
+
+          <a routerLink="/manager" class="card-link d-block text-right">Turn back</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

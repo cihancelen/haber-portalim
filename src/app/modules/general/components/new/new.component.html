@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-sm-6 mx-auto mt-3">
+
+      <div class="card news-card">
+        <!-- <img src="..." class="card-img-top" alt="..."> -->
+        <div class="card-body">
+          <h5 class="card-title" [title]="news.title">{{ news.title }}</h5>
+
+          <h6 class="card-subtitle">Yazar: {{ news?.author?.email }}</h6>
+
+          <p class="card-text" [title]="news.description">{{ news.description }}</p>
+          <span class="d-block mb-1">
+            Created Date: {{ news?.createdDate?.toDate()| date }} - 
+            Modified Date: {{ news?.modifiedDate?.toDate() | date }}</span>
+
+          <span class="badge badge-pill text-white bg-danger mr-2" *ngFor="let tag of news.tags">{{ tag }}</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
